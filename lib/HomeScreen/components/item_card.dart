@@ -35,11 +35,14 @@ class _ItemCardState extends State<ItemCard> {
                 alignment: Alignment.topCenter,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(24),
-                  child: Image(
-                    height: size.height * 0.420,
-                    width: size.width * 0.820,
-                    fit: BoxFit.cover,
-                    image: AssetImage(widget.itemlist.image),
+                  child: Hero(
+                    tag: widget.itemlist.image,
+                    child: Image(
+                      height: size.height * 0.420,
+                      width: size.width * 0.820,
+                      fit: BoxFit.cover,
+                      image: AssetImage(widget.itemlist.image),
+                    ),
                   ),
                 ),
               ),
